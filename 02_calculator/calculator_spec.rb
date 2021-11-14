@@ -77,16 +77,38 @@ end
 # once the above tests pass,
 # write tests and code for the following:
 
+
+
+
+
+
+
 describe "multiply" do
   it "multiplies two numbers" do
     expect(multiply(2,3)).to eq(6)
   end
 
   it "multiplies several numbers" do
-    expect(multiply(2,3)).to eq(6)
+    expect(multiply(1,2,3)).to eq(6)
     #expect(multiply([1,2,3])).to eq(6)
   end
+
+  it "multiplies 10 numbers" do
+    expect(multiply(1,2,3,4,5,6,7,8,9,10)).to eq(3628800)
+  end
+
+  it "less than 2 parameters should be nil" do
+    expect(multiply(1)).to eq(nil)
+  end
 end
+
+
+
+
+
+
+
+
 
 describe "#power" do
   it "raises one number to the power of another number" do

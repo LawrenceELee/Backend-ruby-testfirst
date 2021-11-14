@@ -17,11 +17,57 @@ def multiply( num1, num2 )
   return num1 * num2
 end
 
-=begin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ruby doesn't support method overloading. have to fix implementation of multiply
-def multiply( nums )
+def multiply( *nums )
+  return nil if nums.length < 2
+  
   return nums.reduce(1) { |acc, elmt| acc * elmt }
+=begin
+  result = 1
+  nums.each do |num|
+    result *= num
+  end
+  return result
+=end
 end
+
+=begin
+def multiply(num1, num2, num3)
+  return num1 * num2 * num3
+end
+=end
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 =end
 
 def power( base, exp )
