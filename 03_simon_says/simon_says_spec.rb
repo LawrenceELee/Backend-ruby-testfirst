@@ -46,6 +46,10 @@ describe "Simon says" do
     it "should repeat a number of times" do
       expect(repeat("hello", 3)).to eq("hello hello hello")
     end
+
+    it "should repeat a 5 times" do
+      expect(repeat("hello", 5)).to eq("hello hello hello hello hello")
+    end
   end
 
   describe "start_of_word" do
@@ -84,7 +88,7 @@ describe "Simon says" do
       expect(titleize("david copperfield")).to eq("David Copperfield")
     end
 
-    it "doesn't capitalize 'little words' in a title" do
+    it"doesn't capitalize 'little words' in a title" do
       expect(titleize("war and peace")).to eq("War and Peace")
     end
 
