@@ -36,10 +36,16 @@ end
 
 
 # ruby doesn't support method overloading. have to fix implementation of multiply
-def multiply( *nums )
-  return nil if nums.length < 2
-  
-  return nums.reduce(1) { |acc, elmt| acc * elmt }
+def multiply( num1 =1, num2 =1, *nums )
+  num_of_params = method(:multiply).parameters    # this returns an array of the params
+
+  if num_of_params.length == 2
+    num1 * num2
+  else
+    num1 * num2 * nums.reduce(1) { |acc, elmt| acc * elmt }
+  end
+
+
 =begin
   result = 1
   nums.each do |num|
@@ -48,12 +54,6 @@ def multiply( *nums )
   return result
 =end
 end
-
-=begin
-def multiply(num1, num2, num3)
-  return num1 * num2 * num3
-end
-=end
 
 
 

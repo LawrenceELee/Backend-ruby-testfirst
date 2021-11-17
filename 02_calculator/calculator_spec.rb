@@ -90,16 +90,12 @@ describe "multiply" do
 
   it "multiplies several numbers" do
     expect(multiply(1,2,3)).to eq(6)
-    #expect(multiply([1,2,3])).to eq(6)
   end
 
   it "multiplies 10 numbers" do
     expect(multiply(1,2,3,4,5,6,7,8,9,10)).to eq(3628800)
   end
 
-  it "less than 2 parameters should be nil" do
-    expect(multiply(1)).to eq(nil)
-  end
 end
 
 
